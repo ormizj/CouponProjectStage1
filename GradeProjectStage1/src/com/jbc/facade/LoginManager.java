@@ -73,17 +73,21 @@ public final class LoginManager {
 			AdminFacade admin = AdminFacade.getInstance();
 			if (admin.login(email, password))
 				return admin;
+			break;
 		case COMPANY:
 			CompanyFacade company = new CompanyFacade();
 			if (company.login(email, password))
 				return company;
+			break;
 		case CUSTOMER:
 			CustomerFacade customer = new CustomerFacade();
 			if (customer.login(email, password))
 				return customer;
+			break;
 		default:
-			return null;
+			break;
 		}
+		return null;
 	}
 
 }
