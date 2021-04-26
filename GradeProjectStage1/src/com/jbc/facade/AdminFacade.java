@@ -40,10 +40,6 @@ public final class AdminFacade extends ClientFacade {
 	 * Singleton constructor that initializes the connections with the
 	 * <code>CompaniesDBDAO</code> and the <code>CustomersDBDAO</code>.
 	 * 
-	 * @throws InstantiationException
-	 * @throws IllegalAccessException
-	 * @throws ClassNotFoundException
-	 * @throws InterruptedException
 	 * @see #con
 	 * @see #companiesDAO
 	 * @see #customersDAO
@@ -62,10 +58,6 @@ public final class AdminFacade extends ClientFacade {
 	 * instance.
 	 * 
 	 * @return <code>AdminFacade</code> instance, if this method is called upon
-	 * @throws InstantiationException
-	 * @throws IllegalAccessException
-	 * @throws ClassNotFoundException
-	 * @throws InterruptedException
 	 * @see #AdminFacade()
 	 * @see #instance
 	 */
@@ -105,11 +97,13 @@ public final class AdminFacade extends ClientFacade {
 	 *                                        {@code null} values in it.
 	 * @throws CompanyDuplicateValueException if a <code>Company</code> with the
 	 *                                        same name or email already exists.
-	 * @throws CompanyIsNullException
+	 * @throws CompanyIsNullException         if the <code>Company</code> value is
+	 *                                        {@code null}
 	 * @see #checkNameEmail(Company)
 	 * @see #companiesDAO
 	 */
-	public synchronized void createCompany(Company company) throws CompanyNullValueException, CompanyDuplicateValueException, CompanyIsNullException {
+	public synchronized void createCompany(Company company)
+			throws CompanyNullValueException, CompanyDuplicateValueException, CompanyIsNullException {
 		checkNameEmail(companiesDAO.getAllCompanies(), company);
 		companiesDAO.addCompany(company);
 	}
@@ -126,7 +120,8 @@ public final class AdminFacade extends ClientFacade {
 	 *                                        found.
 	 * @throws CompanyDuplicateValueException if a <code>Company</code> with the
 	 *                                        same name or email already exists.
-	 * @throws CompanyIsNullException
+	 * @throws CompanyIsNullException         if the <code>Company</code> value is
+	 *                                        {@code null}
 	 * @see #checkNameEmail(Company)
 	 * @see #companiesDAO
 	 */
@@ -155,7 +150,8 @@ public final class AdminFacade extends ClientFacade {
 	 *                                        {@code null} values in it.
 	 * @throws CompanyDuplicateValueException if a <code>Company</code> with the
 	 *                                        same name or email already exists.
-	 * @throws CompanyIsNullException
+	 * @throws CompanyIsNullException         if the <code>Company</code> value is
+	 *                                        {@code null}
 	 * @see util#ExceptionUtils
 	 * @see #checkCompany(Company)
 	 */
@@ -279,7 +275,8 @@ public final class AdminFacade extends ClientFacade {
 	 *                                         not found.
 	 * @throws CustomerDuplicateValueException if a <code>Customer</code> with the
 	 *                                         same email already exists.
-	 * @throws CustomerIsNullException
+	 * @throws CustomerIsNullException         if the <code>Customer</code> value is
+	 *                                         {@code null}
 	 * @see #checkCustomer(Customer)
 	 * @see #checkEmail(Customer)
 	 * @see #customersDAO
@@ -305,7 +302,8 @@ public final class AdminFacade extends ClientFacade {
 	 *                                         {@code null} values in it.
 	 * @throws CustomerDuplicateValueException if a <code>Customer</code> with the
 	 *                                         same email already exists.
-	 * @throws CustomerIsNullException
+	 * @throws CustomerIsNullException         if the <code>Customer</code> value is
+	 *                                         {@code null}
 	 * @see #checkEmail(Customer)
 	 * @see #customersDAO
 	 */
@@ -326,7 +324,8 @@ public final class AdminFacade extends ClientFacade {
 	 *                                         same email already exists.
 	 * @throws CustomerNullValueException      if the <code>Company</code> has any
 	 *                                         {@code null} values in it.
-	 * @throws CustomerIsNullException
+	 * @throws CustomerIsNullException         if the <code>Customer</code> value is
+	 *                                         {@code null}
 	 * @see #checkCustomer(Customer)
 	 */
 	private void checkEmail(List<Customer> customers, Customer customer)

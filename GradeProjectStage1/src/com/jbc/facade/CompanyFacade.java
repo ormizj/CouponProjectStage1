@@ -37,10 +37,6 @@ public final class CompanyFacade extends ClientFacade {
 	 * Constructor that initializes the connections with the
 	 * <code>CompaniesDBDAO</code> and the <code>CouponsDBDAO</code>.
 	 * 
-	 * @throws InstantiationException
-	 * @throws IllegalAccessException
-	 * @throws ClassNotFoundException
-	 * @throws InterruptedException
 	 * @see #con
 	 * @see #companiesDAO
 	 * @see #couponsDAO
@@ -94,7 +90,8 @@ public final class CompanyFacade extends ClientFacade {
 	 *                                       below 1.
 	 * @throws CouponExpiredCreateException  if the <code>Coupon</code> is already
 	 *                                       expired.
-	 * @throws CouponIsNullException
+	 * @throws CouponIsNullException         if the <code>Coupon</code> value is
+	 *                                       {@code null}
 	 * @see #checkCoupon(Coupon)
 	 * @see #checkTitle(List, Coupon)
 	 * @see #thisCompany
@@ -129,7 +126,8 @@ public final class CompanyFacade extends ClientFacade {
 	 * @throws CouponNoStockException        if the <code>Coupon</code> amount is
 	 *                                       below 1.
 	 * @throws CouponExpiredCreateException
-	 * @throws CouponIsNullException
+	 * @throws CouponIsNullException         if the <code>Coupon</code> value is
+	 *                                       {@code null}
 	 * @see util#SyncUtils
 	 * @see #checkCoupon(Coupon)
 	 * @see #checkTitle(List, Coupon)

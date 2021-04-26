@@ -34,10 +34,6 @@ public final class CustomerFacade extends ClientFacade {
 	 * Constructor that initializes the connections with the
 	 * <code>CustomersDBDAO</code> and the <code>CouponsDBDAO</code>.
 	 * 
-	 * @throws InstantiationException
-	 * @throws IllegalAccessException
-	 * @throws ClassNotFoundException
-	 * @throws InterruptedException
 	 * @see #con
 	 * @see #customersDAO
 	 * @see #couponsDAO

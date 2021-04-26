@@ -1,7 +1,5 @@
 package com.jbc.facade;
 
-import java.sql.SQLException;
-
 import com.jbc.util.facadeUtils.ClientTypeUtils;
 
 /**
@@ -35,10 +33,6 @@ public final class LoginManager {
 	 * 
 	 * @return <code>LoginManager</code> instance, if this method is called upon
 	 *         multiple times, returns the same instance that was first created.
-	 * @throws InstantiationException
-	 * @throws IllegalAccessException
-	 * @throws ClassNotFoundException
-	 * @throws SQLException
 	 * @see #LoginManager()
 	 * @see #instance
 	 */
@@ -59,11 +53,6 @@ public final class LoginManager {
 	 * @return <code>CustomerFacade</code>, <code>CompanyFacade</code>,
 	 *         <code>AdminFacade</code> based on the <code>ClientTypeUtils</code>
 	 *         type, or {@code null} if the login was unsuccessful.
-	 * @throws InstantiationException
-	 * @throws IllegalAccessException
-	 * @throws ClassNotFoundException
-	 * @throws SQLException
-	 * @throws InterruptedException
 	 */
 	public synchronized ClientFacade login(String email, String password, ClientTypeUtils clientType) {
 		if (email == null || password == null || clientType == null)
