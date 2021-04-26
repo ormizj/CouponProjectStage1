@@ -61,7 +61,8 @@ public abstract class ClientFacade {
 	 * @throws NegativePriceException   if the <code>Coupon</code> price is below 0.
 	 * @throws CouponNoStockException   if the <code>Coupon</code> amount is below
 	 *                                  1.
-	 * @throws CouponIsNullException
+	 * @throws CouponIsNullException    if the <code>Coupon</code> value is
+	 *                                  {@code null}
 	 * @see util#ExceptionUtils
 	 */
 	protected void checkCoupon(Coupon coupon)
@@ -107,7 +108,8 @@ public abstract class ClientFacade {
 	 * @param customer
 	 * @throws CustomerNullValueException if the <code>Customer</code> has any
 	 *                                    {@code null} values in it.
-	 * @throws CustomerIsNullException
+	 * @throws CustomerIsNullException    if the <code>Customer</code> value is
+	 *                                    {@code null}
 	 * @see util#ExceptionUtils
 	 */
 	protected void checkCustomer(Customer customer) throws CustomerNullValueException, CustomerIsNullException {
@@ -139,7 +141,8 @@ public abstract class ClientFacade {
 	 * @param customer
 	 * @throws CompanyNullValueException if the <code>Company</code> has any
 	 *                                   {@code null} values in it.
-	 * @throws CompanyIsNullException
+	 * @throws CompanyIsNullException    if the <code>Company</code> value is
+	 *                                   {@code null}
 	 * @see util#ExceptionUtils
 	 */
 	protected void checkCompany(Company company) throws CompanyNullValueException, CompanyIsNullException {
