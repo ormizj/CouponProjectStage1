@@ -1,3 +1,0 @@
-Add this to the JavaProject, using build path and adding it as external JAR
-
-this jar is for MySQL version: 8.0.23
