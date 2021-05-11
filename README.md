@@ -1,5 +1,5 @@
 # CouponProject
-The coupon project created by: Or Mizrahi, Shay Yadin, Jonathan Kaspi.
+The Coupon Project created by: Or Mizrahi, Shay Yadin, Jonathan Kaspi.
 
 GradeProject - The file of the project's code.
 
